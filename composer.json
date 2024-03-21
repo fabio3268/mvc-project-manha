@@ -1,0 +1,32 @@
+{
+  "name": "fabio3268/mvc-project-manha",
+  "description": "Estrutura básica de uma aplicação MVC",
+  "minimum-stability": "stable",
+  "authors": [
+    {
+      "name": "Fábio Santos",
+      "email": "fabiosantos@ifsul.edu.br",
+      "homepage": "https://www.ifsul.edu.br",
+      "role": "Developer"
+    }
+  ],
+  "config": {
+    "vendor-dir": "vendor"
+  },
+  "autoload": {
+    "psr-4": {
+      "Source\\": "source/"
+    },
+    "files": [
+      "source/Boot/Config.php",
+      "source/Boot/Helpers.php"
+    ]
+  },
+  "require": {
+    "php": ">=8.1",
+    "ext-pdo": ">=7.4",
+    "coffeecode/router" : "2.0.2",
+    "league/plates": "3.5.*",
+    "firebase/php-jwt": "v6.10.0"
+  }
+}
