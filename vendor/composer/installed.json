@@ -1,0 +1,191 @@
+{
+    "packages": [
+        {
+            "name": "coffeecode/router",
+            "version": "2.0.2",
+            "version_normalized": "2.0.2.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/robsonvleite/router.git",
+                "reference": "a16770ae952ce3f91a04035a09be610a030e049c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/robsonvleite/router/zipball/a16770ae952ce3f91a04035a09be610a030e049c",
+                "reference": "a16770ae952ce3f91a04035a09be610a030e049c",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=8.0"
+            },
+            "time": "2022-04-23T16:01:23+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "CoffeeCode\\Router\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Robson V. Leite",
+                    "email": "cursos@upinside.com.br",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A classic CoffeeCode Router is easy, fast and extremely uncomplicated. Create and manage your routes in minutes!",
+            "homepage": "http://www.upinside.com.br",
+            "keywords": [
+                "Coffeecode",
+                "route",
+                "router",
+                "routes",
+                "upinside"
+            ],
+            "support": {
+                "issues": "https://github.com/robsonvleite/router/issues",
+                "source": "https://github.com/robsonvleite/router/tree/2.0.2"
+            },
+            "install-path": "../coffeecode/router"
+        },
+        {
+            "name": "firebase/php-jwt",
+            "version": "v6.10.0",
+            "version_normalized": "6.10.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/firebase/php-jwt.git",
+                "reference": "a49db6f0a5033aef5143295342f1c95521b075ff"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/firebase/php-jwt/zipball/a49db6f0a5033aef5143295342f1c95521b075ff",
+                "reference": "a49db6f0a5033aef5143295342f1c95521b075ff",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.4||^8.0"
+            },
+            "require-dev": {
+                "guzzlehttp/guzzle": "^6.5||^7.4",
+                "phpspec/prophecy-phpunit": "^2.0",
+                "phpunit/phpunit": "^9.5",
+                "psr/cache": "^1.0||^2.0",
+                "psr/http-client": "^1.0",
+                "psr/http-factory": "^1.0"
+            },
+            "suggest": {
+                "ext-sodium": "Support EdDSA (Ed25519) signatures",
+                "paragonie/sodium_compat": "Support EdDSA (Ed25519) signatures when libsodium is not present"
+            },
+            "time": "2023-12-01T16:26:39+00:00",
+            "type": "library",
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "Firebase\\JWT\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Neuman Vong",
+                    "email": "neuman+pear@twilio.com",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Anant Narayanan",
+                    "email": "anant@php.net",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A simple library to encode and decode JSON Web Tokens (JWT) in PHP. Should conform to the current spec.",
+            "homepage": "https://github.com/firebase/php-jwt",
+            "keywords": [
+                "jwt",
+                "php"
+            ],
+            "support": {
+                "issues": "https://github.com/firebase/php-jwt/issues",
+                "source": "https://github.com/firebase/php-jwt/tree/v6.10.0"
+            },
+            "install-path": "../firebase/php-jwt"
+        },
+        {
+            "name": "league/plates",
+            "version": "v3.5.0",
+            "version_normalized": "3.5.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/plates.git",
+                "reference": "a6a3238e46c6e19af7318fdc36bfbe49b0620231"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/plates/zipball/a6a3238e46c6e19af7318fdc36bfbe49b0620231",
+                "reference": "a6a3238e46c6e19af7318fdc36bfbe49b0620231",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^7.0|^8.0"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "^1.6",
+                "phpunit/phpunit": "^9.5",
+                "squizlabs/php_codesniffer": "^3.5"
+            },
+            "time": "2023-01-16T20:25:45+00:00",
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "3.0-dev"
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "League\\Plates\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jonathan Reinink",
+                    "email": "jonathan@reinink.ca",
+                    "role": "Developer"
+                },
+                {
+                    "name": "RJ Garcia",
+                    "email": "ragboyjr@icloud.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Plates, the native PHP template system that's fast, easy to use and easy to extend.",
+            "homepage": "https://platesphp.com",
+            "keywords": [
+                "league",
+                "package",
+                "templates",
+                "templating",
+                "views"
+            ],
+            "support": {
+                "issues": "https://github.com/thephpleague/plates/issues",
+                "source": "https://github.com/thephpleague/plates/tree/v3.5.0"
+            },
+            "install-path": "../league/plates"
+        }
+    ],
+    "dev": true,
+    "dev-package-names": []
+}
