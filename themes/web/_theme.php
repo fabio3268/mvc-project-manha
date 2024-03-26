@@ -5,6 +5,8 @@
     <title>..:: Meu Sitema ::..</title>
 </head>
 <body>
-<h1>Olá, eu sou a CONTATO com PLATES e HTML...</h1>
+<?php
+    echo $this->section("content");
+?>
 </body>
 </html>

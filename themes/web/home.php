@@ -1,3 +1,4 @@
 <?php
-
-echo "<h1>Eu sou a Home</h1>";
+    $this->layout("_theme");
+?>
+<h1>Eu sou a HOME, agora com Theme </h1>
