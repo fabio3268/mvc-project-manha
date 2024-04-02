@@ -19,6 +19,12 @@ public function __construct()
         echo $this->view->render("home",[]);
     }
 
+    public function about ()
+    {
+        //echo "<h1>Eu sou a Home...</h1>";
+        echo $this->view->render("about",[]);
+    }
+
     public function contact ()
     {
         echo $this->view->render("contact",[]);

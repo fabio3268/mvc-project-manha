@@ -13,6 +13,7 @@ $route->namespace("Source\App");
 $route->group(null);
 
 $route->get("/", "Web:home");
+$route->get("/sobre", "Web:about");
 $route->get("/contato", "Web:contact");
 $route->get("/localizacao", "Web:location");
 $route->get("/carrinho-compras","Web:cart");

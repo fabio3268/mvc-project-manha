@@ -9,11 +9,10 @@
 </head>
 <body>
 <nav id="navbar">
-    <a href="#home">Home</a>
-    <a href="#about">Sobre</a>
-    <a href="#contact">Contato</a>
-    <a href="#contact">Localização</a>
-    <a href="#contact">Carrinho</a>
+    <a href="<?= url();?>">Home</a>
+    <a href="<?= url("sobre"); ?>">Sobre</a>
+    <a href="<?= url("contato"); ?>">Contato</a>
+    <a href="<?= url("localizacao"); ?>">Localização</a>
 </nav>
 
 <div id="content">
