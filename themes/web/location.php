@@ -1,3 +1,4 @@
 <?php
 
-echo "<h1>Eu sou a Localização, agora com Plates</h1>";
+echo $this->layout("_theme");
+?>
