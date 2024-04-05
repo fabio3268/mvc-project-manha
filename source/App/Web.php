@@ -47,6 +47,12 @@ public function __construct()
         echo "<h1>Olá, eu sou os serviços</h1>";
     }
 
+    public function faqs(): void
+    {
+        //echo "<h1>Olá, sou a FAQS</h1>";
+        echo $this->view->render("faqs",[]);
+    }
+
     public function error (array $data)
     {
         var_dump($data);

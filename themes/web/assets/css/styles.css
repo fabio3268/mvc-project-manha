@@ -27,3 +27,12 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+.faq-question {
+    cursor: pointer;
+}
+
+.faq-answer {
+    display: none;
+    padding-left: 1em;
+}
