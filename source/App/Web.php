@@ -33,6 +33,11 @@ public function __construct()
         //echo "<h1>Olá, eu sou o Contato...</h1>";
     }
 
+    public function login ()
+    {
+        echo $this->view->render("login",[]);
+    }
+
     public function location ()
     {
         //echo "<h1>Eu sou a Localização</h1>";
