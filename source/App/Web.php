@@ -3,6 +3,8 @@
 namespace Source\App;
 
 use League\Plates\Engine;
+use Source\App\Api\Faqs;
+use Source\Models\Faq\Question;
 
 class Web
 {
@@ -49,8 +51,12 @@ public function __construct()
 
     public function faqs(): void
     {
-        //echo "<h1>Olá, sou a FAQS</h1>";
-        echo $this->view->render("faqs",[]);
+        $question = new Question();
+        $questions = $question->selectAll();
+        //var_dump($questions);
+        echo $this->view->render("faqs",[
+            "questions" => $questions
+        ]);
     }
 
     public function error (array $data)

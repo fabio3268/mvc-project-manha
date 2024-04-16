@@ -11,6 +11,12 @@ class Question extends Model {
     protected $question;
     protected $answer;
 
+    /**
+     * @param int|null $id
+     * @param int|null $idType
+     * @param string|null $question
+     * @param string|null $answer
+     */
     public function __construct(
         int $id = null,
         int $idType = null,

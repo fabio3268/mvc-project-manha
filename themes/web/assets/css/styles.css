@@ -18,6 +18,11 @@ body {
     text-decoration: none;
 }
 
+.content {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
 footer {
     background-color: #333;
     color: #fff;

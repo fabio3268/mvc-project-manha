@@ -6,9 +6,9 @@
     <title>..:: Meu Sistema ::..</title>
     <link rel="stylesheet" href="themes/web/assets/css/styles.css">
     <script src="themes/web/assets/js/scripts.js"></script>
-    <?php if ($this->section("specific-script")): ?>
-        <?= $this->section("specific-script"); ?>
-    <?php endif; ?>
+<?php if ($this->section("specific-script")): ?>
+    <?= $this->section("specific-script"); ?>
+<?php endif; ?>
 </head>
 <body>
 <nav id="navbar">
@@ -19,7 +19,7 @@
     <a href="<?= url("faqs"); ?>">FAQs</a>
 </nav>
 
-<div id="content">
+<div class="content">
     <!-- Your content goes here -->
     <?php
         echo $this->section("content");
@@ -27,7 +27,7 @@
 </div>
 
 <footer>
-    <p>© 2023 Meu Sistema. All rights reserved.</p>
+    <p>© 2024 Meu Sistema. Todos os direitos reservados.</p>
 </footer>
 
 </body>
