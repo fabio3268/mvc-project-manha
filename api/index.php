@@ -12,6 +12,9 @@ $route->namespace("Source\App\Api");
 
 $route->get("/faqs","Faqs:listFaqs");
 
+$route->get("/users","Users:listUsers");
+$route->post("/users", "Users:createUser");
+
 $route->dispatch();
 
 /** ERROR REDIRECT */

@@ -4,7 +4,9 @@ namespace Source\Models;
 
 use PDOException;
 use Source\Core\Connect;
-class User {
+use Source\Core\Model;
+
+class User extends Model {
     private $id;
     private $name;
     private $email;
@@ -22,6 +24,7 @@ class User {
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
+        $this->entity = "users";
     }
 
     public function getId(): ?int
