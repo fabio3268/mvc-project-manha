@@ -1,12 +1,12 @@
 <?php
-echo $this->layout("_theme");
+    echo $this->layout("_theme");
 ?>
 <?php
-$this->start("specific-script");
+    $this->start("specific-script");
 ?>
 <script src="themes/web/assets/js/scripts-faqs.js"></script>
 <?php
-$this->end();
+    $this->end();
 ?>
 <!--
 <div class="faq">

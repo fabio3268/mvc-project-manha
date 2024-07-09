@@ -14,7 +14,35 @@ class Users extends Api
 
     public function createUser (array $data)
     {
-        echo "Criando Usuário";
-        var_dump($data);
+        if(in_array("", $data)) {
+            $this->back([
+                "type" => "error",
+                "message" => "Preencha todos os campos"
+            ], 400);
+            return;
+        }
+
+        $user = new User(
+            null,
+            $data["name"],
+            $data["email"],
+            $data["password"]
+        );
+
+        $insertUser = $user->insert();
+
+        if(!$insertUser){
+            $this->back([
+                "type" => "error",
+                "message" => $user->getMessage()
+            ], 400);
+            return;
+        }
+
+        $this->back([
+            "type" => "success",
+            "message" => "Usuário cadastrodo com sucesso!"
+        ]);
+
     }
 }

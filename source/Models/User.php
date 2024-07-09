@@ -77,6 +77,11 @@ class User extends Model {
 
         $conn = Connect::getInstance();
 
+        if(!filter_var($this->email,FILTER_VALIDATE_EMAIL)){
+            $this->message = "E-mail Inválido!";
+            return false;
+        }
+
         $query = "SELECT * FROM users WHERE email LIKE :email";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":email", $this->email);
