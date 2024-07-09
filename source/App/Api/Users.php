@@ -18,7 +18,7 @@ class Users extends Api
             $this->back([
                 "type" => "error",
                 "message" => "Preencha todos os campos"
-            ], 400);
+            ]);
             return;
         }
 
@@ -35,7 +35,7 @@ class Users extends Api
             $this->back([
                 "type" => "error",
                 "message" => $user->getMessage()
-            ], 400);
+            ]);
             return;
         }
 
