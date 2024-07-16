@@ -10,10 +10,22 @@ $route = new Router(url(),":");
 
 $route->namespace("Source\App\Api");
 
-$route->get("/faqs","Faqs:listFaqs");
+$route->group("/faqs");
 
-$route->get("/users","Users:listUsers");
-$route->post("/users", "Users:createUser");
+$route->get("/","Faqs:listFaqs");
+
+$route->group("null");
+
+$route->group("/users");
+
+$route->get("/", "Users:listUsers");
+$route->post("/","Users:createUser");
+$route->post("/login","Users:loginUser");
+$route->post("/update","Users:updateUser");
+$route->post("/set-password","Users:setPassword");
+
+$route->group("null");
+
 
 $route->dispatch();
 
