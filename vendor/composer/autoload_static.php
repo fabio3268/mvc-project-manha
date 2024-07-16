@@ -7,8 +7,8 @@ namespace Composer\Autoload;
 class ComposerStaticInit033ce934a534ea60e40c5deba27a5652
 {
     public static $files = array (
-        'e4ece0e463259e8c788b0fbc18116d99' => __DIR__ . '/../..' . '/source/Boot/Config.php',
-        '1b0ff9557ed59b4dcc5b5e459f5f9d34' => __DIR__ . '/../..' . '/source/Boot/Helpers.php',
+        '2f888917179f341cb76931cf946863fb' => __DIR__ . '/../..' . '/source/Boot/Config.php',
+        '2e327fb0ee097857b99faf50c086d4b3' => __DIR__ . '/../..' . '/source/Boot/Helpers.php',
     );
 
     public static $prefixLengthsPsr4 = array (

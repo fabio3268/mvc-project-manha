@@ -10,11 +10,7 @@ $route = new Router(url(),":");
 
 $route->namespace("Source\App\Api");
 
-$route->group("/faqs");
-
-$route->get("/","Faqs:listFaqs");
-
-$route->group("null");
+/* USERS */
 
 $route->group("/users");
 
@@ -26,6 +22,13 @@ $route->post("/set-password","Users:setPassword");
 
 $route->group("null");
 
+/* FAQS */
+
+$route->group("/faqs");
+
+$route->get("/","Faqs:listFaqs");
+
+$route->group("null");
 
 $route->dispatch();
 

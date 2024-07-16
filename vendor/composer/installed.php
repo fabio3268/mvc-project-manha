@@ -1,6 +1,6 @@
 <?php return array(
     'root' => array(
-        'name' => 'fabio3268/escola-tarde',
+        'name' => 'fabio3268/mvc-project-manha',
         'pretty_version' => '1.0.0+no-version-set',
         'version' => '1.0.0.0',
         'reference' => NULL,
@@ -19,7 +19,7 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
-        'fabio3268/escola-tarde' => array(
+        'fabio3268/mvc-project-manha' => array(
             'pretty_version' => '1.0.0+no-version-set',
             'version' => '1.0.0.0',
             'reference' => NULL,
@@ -29,9 +29,9 @@
             'dev_requirement' => false,
         ),
         'firebase/php-jwt' => array(
-            'pretty_version' => 'v6.10.0',
-            'version' => '6.10.0.0',
-            'reference' => 'a49db6f0a5033aef5143295342f1c95521b075ff',
+            'pretty_version' => 'v5.5.1',
+            'version' => '5.5.1.0',
+            'reference' => '83b609028194aa042ea33b5af2d41a7427de80e6',
             'type' => 'library',
             'install_path' => __DIR__ . '/../firebase/php-jwt',
             'aliases' => array(),

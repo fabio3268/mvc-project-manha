@@ -117,6 +117,14 @@ class Users extends Api
 
     public function setPassword(array $data)
     {
+        if(!$this->userAuth){
+            $this->back([
+                "type" => "error",
+                "message" => "Você não pode estar aqui.."
+            ]);
+            return;
+        }
+
         $user = new User($this->userAuth->id);
 
         if(!$user->updatePassword($data["password"],$data["newPassword"],$data["confirmNewPassword"])){
