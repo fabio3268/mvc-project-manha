@@ -149,9 +149,10 @@ class User extends Model {
             return false;
         }
 
-        $query = "SELECT * FROM users WHERE email LIKE :email";
+        $query = "SELECT * FROM users WHERE email LIKE :email AND id != :id";
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":email", $this->email);
+        $stmt->bindParam(":id", $this->id);
         $stmt->execute();
 
         if($stmt->rowCount() == 1) {
