@@ -1,0 +1,118 @@
+/* Estilos para a área privada do site */
+
+body.private-area {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f0f0f0; /* Fundo diferente para indicar área privada */
+}
+
+#private-navbar {
+    background-color: #007bff; /* Cor diferente para destacar a área privada */
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    padding: 1em;
+}
+
+#private-navbar a {
+    color: #fff;
+    text-decoration: none;
+}
+
+#user-greeting {
+    display: flex;
+    align-items: center;
+    color: #fff;
+}
+
+#user-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    background-color: #ccc; /* Placeholder para a foto do usuário */
+}
+
+.content-private {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+footer.private-footer {
+    background-color: #007bff; /* Cor do rodapé para área privada */
+    color: #fff;
+    text-align: center;
+    padding: 1em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilização Geral do Formulário */
+.private-area form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+/* Estilização dos Campos */
+.private-area .form-group {
+    margin-bottom: 15px;
+}
+
+.private-area .form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.private-area .form-group input[type="text"],
+.private-area .form-group input[type="email"],
+.private-area .form-group input[type="password"],
+.private-area .form-group input[type="file"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+.private-area .form-group input[type="text"]:focus,
+.private-area .form-group input[type="email"]:focus,
+.private-area .form-group input[type="password"]:focus,
+.private-area .form-group input[type="file"]:focus {
+    border-color: #007bff;
+}
+
+.private-area button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.private-area button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+    .private-area form {
+        padding: 10px;
+    }
+}
+
+/* Estilização Específica para o Campo de Foto */
+.private-area .form-group input[type="file"] {
+    background-color: #f8f9fa;
+    border: none;
+}

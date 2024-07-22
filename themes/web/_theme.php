@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>..:: Meu Sistema ::..</title>
-    <link rel="stylesheet" href="themes/web/assets/css/styles.css">
-    <script src="themes/web/assets/js/scripts.js" async></script>
+    <link rel="stylesheet" href="<?= url("themes/web/assets/css/styles.css"); ?>">
+    <script src="<?= url("themes/web/assets/js/scripts.js"); ?>" async></script>
 <?php if ($this->section("specific-script")): ?>
     <?= $this->section("specific-script"); ?>
 <?php endif; ?>
@@ -19,17 +19,14 @@
     <a href="<?= url("faqs"); ?>">FAQs</a>
     <a href="<?= url("login"); ?>">Entrar</a>
 </nav>
-
 <div class="content">
     <!-- Your content goes here -->
     <?php
         echo $this->section("content");
     ?>
 </div>
-
 <footer>
     <p>© 2024 Meu Sistema. Todos os direitos reservados.</p>
 </footer>
-
 </body>
 </html>

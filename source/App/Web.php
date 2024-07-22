@@ -10,7 +10,7 @@ class Web
 {
     private $view;
 
-public function __construct()
+    public function __construct()
     {
         $this->view = new Engine(__DIR__ . "/../../themes/web","php");
     }

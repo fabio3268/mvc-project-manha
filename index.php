@@ -10,7 +10,6 @@ $route = new Router(url(), ":");
 
 $route->namespace("Source\App");
 
-$route->group(null);
 
 $route->get("/", "Web:home");
 $route->get("/sobre", "Web:about");
@@ -21,7 +20,11 @@ $route->get("/servicos","Web:services");
 $route->get("/faqs","Web:faqs");
 $route->get("/login","Web:login");
 
+$route->group("/app");
 
+$route->get("/", "App:home");
+$route->get("/perfil", "App:profile");
+$route->group(null);
 
 $route->get("/ops/{errcode}", "Web:error");
 
