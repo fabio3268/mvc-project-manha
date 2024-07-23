@@ -12,11 +12,12 @@
         <div id="user-photo"></div>
         <span>Olá, Fulano!</span>
     </div>
-    <a href="/app/perfil">Perfil</a>
-    <a href="/app/meus-pedidos">Meus Pedidos</a>
-    <a href="/app/configuracoes">Configurações</a>
-    <a href="/app/mensagens">Mensagens</a>
-    <a href="/app/suporte">Suporte</a>
+    <a href="<?= url("/app/perfil"); ?>">Perfil</a>
+    <a href="#">Meus Pedidos</a>
+    <a href="#">Configurações</a>
+    <a href="#">Mensagens</a>
+    <a href="#">Suporte</a>
+    <a href="#">Sair</a>
 </nav>
 <div class="content">
     <?php
