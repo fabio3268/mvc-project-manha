@@ -31,6 +31,7 @@ $route->group(null);
 $route->group("/admin");
 
 $route->get("/", "Admin:home");
+$route->get("/cadastro-produtos", "Admin:products");
 
 $route->group(null);
 

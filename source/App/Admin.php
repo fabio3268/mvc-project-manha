@@ -19,4 +19,8 @@ class Admin
         echo $this->view->render("home",[]);
     }
 
+    public function products () {
+        echo $this->view->render("products",[]);
+    }
+
 }
