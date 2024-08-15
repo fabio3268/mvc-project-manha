@@ -10,7 +10,8 @@ class Services extends Api
     {
         parent::__construct();
         if (!$this->userAuth){
-            $this->back(["message" => "Token inválido"], 401);
+            $response = ["message" => "Token inválido"];
+            $this->back($response, 401);
             exit();
         }
     }
