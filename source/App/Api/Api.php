@@ -12,6 +12,10 @@ class Api
     public function __construct()
     {
         header('Content-Type: application/json; charset=UTF-8');
+        header('Access-Control-Allow-Origin: *'); // Permitir todas as origens
+        header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // Métodos permitidos
+        header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, token'); // Cabeçalhos permitidos
+        header('Access-Control-Allow-Credentials: true'); // Permitir credenciais
         $this->headers = getallheaders();
 
         if(!empty($this->headers["token"]) || isset($this->headers["token"])){
