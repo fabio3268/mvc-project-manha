@@ -39,10 +39,10 @@ Aqui tem um formulário de Login e outro para Registrar novos usuários, ambos u
 Ao centro um botão para testar uma requisição com autenticação por token, o token foi armazenado em LocalStorage no momento do login. O retorno está no `consolo.log()`, trata-se de uma requisição de serviços por categoria, ou seja, foi enviado o id de uma categoria e retornou os serviços daquela categoria.
 
 ### Problem de CORs
-Na classe API em seu método `__construct()` foram acrescentadas as seguintes linhas:
+Na classe API em seu método `__construct()` foram acrescentadas as seguintes linhas, porém no meu sistem funciona com ou sem essas linhas:
 
 ```php
-header('Content-Type: application/json; charset=UTF-8');
+header('Content-Type: application/json; charset=UTF-8'); // essa permanece sempre
 header('Access-Control-Allow-Origin: *'); // Permitir todas as origens
 header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // Métodos permitidos
 header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, token'); // Cabeçalhos permitidos
