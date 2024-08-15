@@ -8,7 +8,11 @@ class Services extends Api
 {
     public function __construct()
     {
-
+        parent::__construct();
+        if (!$this->userAuth){
+            $this->back(["message" => "Token inválido"], 401);
+            exit();
+        }
     }
 
     public function getById(array $data)

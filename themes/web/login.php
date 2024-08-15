@@ -14,15 +14,18 @@ $this->end();
 <form id="formLogin">
     <label>
         <span>Email:</span>
-        <input type="email" name="email">
+        <input type="email" name="email" value="fabiosantos@ifsul.edu.br">
     </label>
     <label>
         <span>Senha:</span>
-        <input type="password" name="password">
+        <input type="password" name="password" value="12345678">
     </label>
     <button>Entrar</button>
 </form>
 
+<section>
+    <button id="getByCategory">Teste Requisição Autenticada com Token</button>
+</section>
 <!--Formulário de cadastro-->
 
 <form id="formRegister">

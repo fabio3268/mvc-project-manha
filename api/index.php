@@ -42,11 +42,11 @@ $route->get("/list-by-category/category/{categoryId}","Services:listByCategory")
 
 $route->group("null");
 
-$route->group("/categories");
-$route->post("/","Categories:insert");
-$route->get("/","Categories:getCategory");
-$route->put("/","Categories:update");
-$route->delete("/","Categories:remove");
+$route->group("/services-categories");
+$route->post("/","ServicesCategories:insert");
+$route->get("/","ServicesCategories:getCategory");
+$route->put("/","ServicesCategories:update");
+$route->delete("/","ServicesCategories:remove");
 $route->group("null");
 
 
