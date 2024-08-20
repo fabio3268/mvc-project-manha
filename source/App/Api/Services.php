@@ -16,7 +16,7 @@ class Services extends Api
     public function getById(array $data)
     {
         // método é chamaddo quando a rota precisa de autenticação
-        $this->auth();
+        //$this->auth();
         $service = new Service();
         $response = $service->listById($data["serviceId"]);
         $this->back($response);
