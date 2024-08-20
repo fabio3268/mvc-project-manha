@@ -28,6 +28,10 @@ $this->end();
 </section>
 <!--Formulário de cadastro-->
 
+<section>
+    <button id="getEventsMocitec">Teste de API externa sem autenticação (token)</button>
+</section>
+
 <form id="formRegister">
     <label>
         <span>Nome:</span>

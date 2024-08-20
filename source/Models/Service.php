@@ -25,7 +25,7 @@ class Service extends Model
         $stmt = $conn->prepare($query);
         $stmt->bindParam("service_id",$id);
         $stmt->execute();
-        return $stmt->fetch();
+        return $stmt->fetchAll();
 
     }
 

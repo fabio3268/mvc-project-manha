@@ -4,6 +4,16 @@ ob_start();
 
 require  __DIR__ . "/../vendor/autoload.php";
 
+// os headers abaixo são necessários para permitir o acesso a API
+header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Headers: *");
+header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
+header('Access-Control-Allow-Credentials: true'); // Permitir credenciais
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(200);
+    exit();
+}
+
 use CoffeeCode\Router\Router;
 
 $route = new Router(url(),":");

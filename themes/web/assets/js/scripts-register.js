@@ -39,3 +39,18 @@ buttonGetByCategory.addEventListener("click", async () => {
     const services = await data.json();
     console.log(services);
 });
+
+const getEventsMocitec = document.querySelector("#getEventsMocitec");
+
+getEventsMocitec.addEventListener("click", async () => {
+
+    fetch(`https://api.mocitec.localhost/events/online`, {
+        method: "GET"
+    })
+        .then(response => {response.json()
+            .then(data => {
+                console.log(data);
+            })})
+        .catch(e => console.log('Deu erro: ' + e,message));
+
+});

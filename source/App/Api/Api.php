@@ -7,16 +7,13 @@ use Source\Core\TokenJWT;
 class Api
 {
     protected $headers;
+    // atributo para armazenar os dados do usuário autenticado
     protected $userAuth = false;
 
     public function __construct()
     {
-        header('Content-Type: application/json; charset=UTF-8');
-        header('Access-Control-Allow-Origin: *'); // Permitir todas as origens
-        header('Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS'); // Métodos permitidos
-        header('Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With, token'); // Cabeçalhos permitidos
-        header('Access-Control-Allow-Credentials: true'); // Permitir credenciais
         $this->headers = getallheaders();
+        header("Content-Type: application/json");
 
         if(!empty($this->headers["token"]) || isset($this->headers["token"])){
             $jwt = new TokenJWT();
@@ -30,6 +27,25 @@ class Api
     {
         http_response_code($code);
         echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
+    }
+
+    /**
+     * @return void
+     * @description Verifica se o usuário está autenticado
+     */
+    protected function auth (): void
+    {
+        if (!$this->userAuth){
+            $response = [
+                "error" => [
+                    "code" => "401",
+                    "type" => "unauthorized",
+                    "message" => "Usuário não autorizado e/ou token expirado"
+                ]
+            ];
+            $this->back($response, 401);
+            exit();
+        }
     }
 
 }

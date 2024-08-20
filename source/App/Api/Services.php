@@ -9,22 +9,22 @@ class Services extends Api
     public function __construct()
     {
         parent::__construct();
-        if (!$this->userAuth){
-            $response = ["message" => "Token inválido"];
-            $this->back($response, 401);
-            exit();
-        }
+        // quando todas as rotas da classe são autenticadas, o método $this->auth() pode ser evocado aqui
+        // $this->auth();
     }
 
     public function getById(array $data)
     {
+        // método é chamaddo quando a rota precisa de autenticação
+        $this->auth();
         $service = new Service();
-        $serviceObj = $service->listById($data["serviceId"]);
-        $this->back(array($serviceObj));
+        $response = $service->listById($data["serviceId"]);
+        $this->back($response);
     }
 
     public function listByCategory (array $data)
     {
+        // quando a rota não necessita de autenticação, não evoca o método $this->auth()
         $service = new Service();
         $listServices = $service->listByCategory($data["categoryId"]);
         $this->back($listServices);
