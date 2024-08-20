@@ -45,8 +45,8 @@ $route->group("null");
 $route->group("/services");
 
 $route->get("/service/{serviceId}","Services:getById");
+$route->delete("/service/{serviceId}","Services:delete");
 $route->put("/service/{serviceId}/name/{name}/description/{description}","Services:update");
-
 $route->get("/list-by-category/category/{categoryId}","Services:listByCategory");
 //$route->get("/list-by-category/category/{categoryId}/bland/{blandId}","Services:listByCategory");
 

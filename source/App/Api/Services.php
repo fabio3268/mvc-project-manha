@@ -32,6 +32,31 @@ class Services extends Api
 
     public function update(array $data)
     {
-        var_dump($data);
+        $this->auth();
+
+        $response = [
+            "success" => [
+                "code" => "200",
+                "type" => "success",
+                "message" => "Serviço alterado com sucesso"
+            ]
+        ];
+
+        $this->back($response);
+    }
+
+    public function delete (array $data)
+    {
+        $this->auth();
+
+        $response = [
+            "success" => [
+                "code" => "200",
+                "type" => "success",
+                "message" => "Serviço deletado com sucesso"
+            ]
+        ];
+
+        $this->back($response);
     }
 }
