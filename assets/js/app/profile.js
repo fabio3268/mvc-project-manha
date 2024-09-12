@@ -11,9 +11,9 @@ fetch(getBackendUrlApi() + "/users/me", {
     headers: {
         token: userAuth.token
     }
-})
-    .then((response) => response.json())
-    .then((data) => {
+}).then((response) => {
+    response.json().then((data) => {
         console.log(data.user);
         showDataForm(data.user);
     });
+});
