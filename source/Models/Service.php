@@ -13,6 +13,15 @@ class Service extends Model
     private $description;
     private $message;
 
+    public function __construct(?int $id, int $categoryId, string $name, string $description)
+    {
+        $this->id = $id;
+        $this->categoryId = $categoryId;
+        $this->name = $name;
+        $this->description = $description;
+        $this->entity = "services";
+    }
+
     public function listById (int $id)
     {
         $query = "SELECT services.id, services.name, services.description, 

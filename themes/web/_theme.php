@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>..:: Meu Sistema ::..</title>
-    <link rel="stylesheet" href="<?= url("themes/web/assets/css/styles.css"); ?>">
-    <script src="<?= url("themes/web/assets/js/scripts.js"); ?>" async></script>
+    <link rel="stylesheet" href="<?= url("assets/css/web/styles.css"); ?>">
+    <script type="module" src="<?= url("assets/js/web/scripts.js"); ?>" async></script>
 <?php if ($this->section("specific-script")): ?>
     <?= $this->section("specific-script"); ?>
 <?php endif; ?>

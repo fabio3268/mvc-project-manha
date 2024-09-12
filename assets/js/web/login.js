@@ -1,30 +1,36 @@
-console.log("Olá, Mundo! Script de Registro...");
+import {getBackendUrl, getBackendUrlApi} from "./../_shared/functions.js";
 
-// alterar essa constante para o endereço da sua API
-const url = "http://localhost:8080/mvc-project-manha/api";
+console.log(getBackendUrl(), getBackendUrlApi());
 
 const formRegister = document.querySelector("#formRegister");
-formRegister.addEventListener("submit",async (event) => {
-    event.preventDefault();
-    const data = await fetch(`${url}/users`,{
+formRegister.addEventListener("submit",async (e) => {
+    e.preventDefault();
+    fetch(getBackendUrlApi() + "/users", {
         method: "POST",
         body: new FormData(formRegister)
-    });
-    const user = await data.json();
-    console.log(user);
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            console.log(data);
+            // implementar retorno para o usuário
+        });
 });
 
 const formLogin = document.querySelector("#formLogin");
-formLogin.addEventListener("submit", async (event) => {
-    event.preventDefault();
-    const data = await fetch(`${url}/users/login`,{
+formLogin.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    fetch(getBackendUrlApi() + "/users/login", {
         method: "POST",
         body: new FormData(formLogin)
-    });
-    const response = await data.json();
-    console.log(response.user);
-    localStorage.setItem("userLogin", JSON.stringify(response.user));
+    }).then((response) => response.json())
+        .then((data) => {
+            console.log(data.user, data.user.token);
+            // implementar retorno para o usuário e armazenamento da localStorage
+            localStorage.setItem("userAuth", JSON.stringify(data.user));
+        });
 });
+
+/*
 
 const buttonGetByCategory = document.querySelector("#getByCategory");
 buttonGetByCategory.addEventListener("click", async () => {
@@ -54,3 +60,4 @@ getEventsMocitec.addEventListener("click", async () => {
         .catch(e => console.log('Deu erro: ' + e,message));
 
 });
+*/

@@ -24,4 +24,9 @@ class App
         echo $this->view->render("profile",[]);
     }
 
+    public function cart (array $data)
+    {
+        echo $this->view->render("cart", []);
+    }
+
 }

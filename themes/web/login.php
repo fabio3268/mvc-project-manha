@@ -4,11 +4,28 @@
 <?php
   $this->start("specific-script");
 ?>
-<script src="themes/web/assets/js/scripts-register.js" async></script>
+<script type="module" src="<?= url("assets/js/web/login.js"); ?>" async></script>
 <?php
 $this->end();
 ?>
-<h1>Olá, eu sou o Login!</h1>
+
+
+<form id="formRegister">
+    <label>
+        <span>Nome:</span>
+        <input type="text" name="name" value="Fábio Santos">
+    </label>
+    <label>
+        <span>Email:</span>
+        <input type="email" name="email" value="fabiosantos@ifsul.edu.br">
+    </label>
+    <label>
+        <span>Senha:</span>
+        <input type="password" name="password" value="1234567">
+    </label>
+    <button>Cadastrar</button>
+</form>
+
 <!--Formulário de login-->
 
 <form id="formLogin">
@@ -31,19 +48,3 @@ $this->end();
 <section>
     <button id="getEventsMocitec">Teste de API externa sem autenticação (token)</button>
 </section>
-
-<form id="formRegister">
-    <label>
-        <span>Nome:</span>
-        <input type="text" name="name" value="Fábio Santos">
-    </label>
-    <label>
-        <span>Email:</span>
-        <input type="email" name="email" value="fabiosantos@ifsul.edu.br">
-    </label>
-    <label>
-        <span>Senha:</span>
-        <input type="password" name="password" value="1234567">
-    </label>
-    <button>Cadastrar</button>
-</form>

@@ -24,7 +24,7 @@ $route->group("/app");
 
 $route->get("/", "App:home");
 $route->get("/perfil", "App:profile");
-//$route->get("/carrinho", "App:cart");
+$route->get("/carrinho", "App:cart");
 
 $route->group(null);
 

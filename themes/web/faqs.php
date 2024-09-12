@@ -4,7 +4,7 @@
 <?php
     $this->start("specific-script");
 ?>
-<script src="themes/web/assets/js/scripts-faqs.js"></script>
+<script src="<?= url("assets/js/web/faqs.js"); ?>"></script>
 <?php
     $this->end();
 ?>

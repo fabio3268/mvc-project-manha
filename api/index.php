@@ -9,6 +9,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Headers: *");
 header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header('Access-Control-Allow-Credentials: true'); // Permitir credenciais
+
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(200);
     exit();
@@ -45,6 +46,7 @@ $route->group("null");
 $route->group("/services");
 
 $route->get("/service/{serviceId}","Services:getById");
+$route->post("/service","Services:insert");
 $route->delete("/service/{serviceId}","Services:delete");
 $route->put("/service/{serviceId}/name/{name}/description/{description}","Services:update");
 $route->get("/list-by-category/category/{categoryId}","Services:listByCategory");

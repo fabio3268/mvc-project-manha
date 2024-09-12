@@ -59,4 +59,36 @@ class Services extends Api
 
         $this->back($response);
     }
+
+    public function insert (array $data): void
+    {
+        $service = new Service(
+            NULL,
+            $data["idCategory"],
+            $data["name"],
+            $data["description"]
+        );
+
+        $idService = $service->insert();
+
+        if(!$idService) {
+            $this->back([
+                "type" => "error",
+                "message" => $service->getMessage()
+            ]);
+            return;
+        }
+
+        $this->back([
+            "type" => "success",
+            "message" => "Serviço cadastrado com sucesso",
+            "service" => [
+                "id" => $idService,
+                "idCategory" => $data["idCategory"],
+                "name" => $data["name"],
+                "description" => $data["description"]
+            ]
+        ]);
+
+    }
 }
