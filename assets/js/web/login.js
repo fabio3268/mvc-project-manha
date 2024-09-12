@@ -1,9 +1,9 @@
-import {getBackendUrl, getBackendUrlApi} from "./../_shared/functions.js";
+import {getBackendUrl, getBackendUrlApi, showToast} from "./../_shared/functions.js";
 
 console.log(getBackendUrl(), getBackendUrlApi());
 
 const formRegister = document.querySelector("#formRegister");
-formRegister.addEventListener("submit",async (e) => {
+formRegister.addEventListener("submit", async (e) => {
     e.preventDefault();
     fetch(getBackendUrlApi() + "/users", {
         method: "POST",
@@ -11,8 +11,8 @@ formRegister.addEventListener("submit",async (e) => {
     })
         .then((response) => response.json())
         .then((data) => {
-            console.log(data);
-            // implementar retorno para o usuário
+            console.log(data, data.message);
+            showToast(data.message);
         });
 });
 

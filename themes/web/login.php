@@ -11,6 +11,9 @@ $this->end();
 
 <!-- Formulário de Cadastro de Usuário -->
 
+<!-- Contêiner para as mensagens toast -->
+<div id="toast-container"></div>
+
 <form id="formRegister">
     <label>
         <span>Nome:</span>
