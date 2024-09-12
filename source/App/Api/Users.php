@@ -12,6 +12,26 @@ class Users extends Api
         parent::__construct();
     }
 
+    public function getUser ()
+    {
+        $this->auth();
+
+        $users = new User();
+        $user = $users->selectById($this->userAuth->id);
+
+        $this->back([
+            "type" => "success",
+            "message" => "Usuário autenticado",
+            "user" => [
+                "id" => $this->userAuth->id,
+                "name" => $this->userAuth->name,
+                "email" => $this->userAuth->email,
+                "address" => $user->address
+            ]
+        ]);
+
+    }
+
     public function listUsers ()
     {
         $users = new User();

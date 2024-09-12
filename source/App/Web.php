@@ -64,9 +64,9 @@ class Web
         ]);
     }
 
-    public function error (array $data)
+    /*public function error (array $data)
     {
         var_dump($data);
-    }
+    }*/
 
 }

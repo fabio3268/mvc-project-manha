@@ -27,6 +27,7 @@ $route->group("/users");
 
 $route->get("/", "Users:listUsers");
 $route->post("/","Users:createUser");
+$route->get("/me","Users:getUser");
 $route->post("/login","Users:loginUser");
 $route->post("/update","Users:updateUser");
 $route->post("/set-password","Users:setPassword");

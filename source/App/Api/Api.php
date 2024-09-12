@@ -29,10 +29,6 @@ class Api
         echo json_encode($response, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE);
     }
 
-    /**
-     * @return void
-     * @description Verifica se o usuário está autenticado
-     */
     protected function auth (): void
     {
         if (!$this->userAuth){

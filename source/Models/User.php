@@ -11,19 +11,22 @@ class User extends Model {
     private $name;
     private $email;
     private $password;
+    private $address;
     private $message;
 
     public function __construct(
         int $id = null,
         string $name = null,
         string $email = null,
-        string $password = null
+        string $password = null,
+        string $address = null
     )
     {
         $this->id = $id;
         $this->name = $name;
         $this->email = $email;
         $this->password = $password;
+        $this->address = $address;
         $this->entity = "users";
     }
 
@@ -65,6 +68,16 @@ class User extends Model {
     public function setPassword(?string $password): void
     {
         $this->password = $password;
+    }
+
+    public function getAddress(): ?string
+    {
+        return $this->address;
+    }
+
+    public function setAddress(?string $address): void
+    {
+        $this->address = $address;
     }
 
     public function getMessage(): ?string
@@ -161,12 +174,13 @@ class User extends Model {
         }
 
         $query = "UPDATE users 
-                  SET name = :name, email = :email 
+                  SET name = :name, email = :email, address = :address
                   WHERE id = :id";
 
         $stmt = $conn->prepare($query);
         $stmt->bindParam(":name", $this->name);
         $stmt->bindParam(":email", $this->email);
+        $stmt->bindParam(":address", $this->address);
         $stmt->bindParam(":id", $this->id);
 
         try {

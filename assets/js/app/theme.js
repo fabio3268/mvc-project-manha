@@ -6,4 +6,4 @@ if(!userAuth){
     window.location.href = getBackendUrl() + "/login";
 }
 
-console.log(userAuth);
+//console.log(userAuth);
