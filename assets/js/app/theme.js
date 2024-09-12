@@ -1,4 +1,4 @@
-import {getBackendUrl, getBackendUrlApi} from "./../_shared/functions.js";
+import {getBackendUrl} from "./../_shared/functions.js";
 
 const userAuth = localStorage.getItem("userAuth");
 

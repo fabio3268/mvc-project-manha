@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>..:: Meu Sistema ::..</title>
     <link rel="stylesheet" href="<?= url("assets/css/web/styles.css"); ?>">
-    <script type="module" src="<?= url("assets/js/web/scripts.js"); ?>" async></script>
+    <script type="module" src="<?= url("assets/js/web/theme.js"); ?>" async></script>
 <?php if ($this->section("specific-script")): ?>
     <?= $this->section("specific-script"); ?>
 <?php endif; ?>
