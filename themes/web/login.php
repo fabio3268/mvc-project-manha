@@ -9,6 +9,7 @@
 $this->end();
 ?>
 
+<!-- Formulário de Cadastro de Usuário -->
 
 <form id="formRegister">
     <label>
@@ -26,7 +27,7 @@ $this->end();
     <button>Cadastrar</button>
 </form>
 
-<!--Formulário de login-->
+<!-- Formulário de login -->
 
 <form id="formLogin">
     <label>
@@ -39,12 +40,3 @@ $this->end();
     </label>
     <button>Entrar</button>
 </form>
-
-<section>
-    <button id="getByCategory">Teste Requisição Autenticada com Token</button>
-</section>
-<!--Formulário de cadastro-->
-
-<section>
-    <button id="getEventsMocitec">Teste de API externa sem autenticação (token)</button>
-</section>
