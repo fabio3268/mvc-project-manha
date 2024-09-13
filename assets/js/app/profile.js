@@ -6,14 +6,14 @@ const userAuth = JSON.parse(localStorage.getItem("userAuth"));
 
 console.log(userAuth.token);
 
-fetch(getBackendUrlApi() + "/users/me", {
+fetch(getBackendUrlApi("users/me"), {
     method: "GET",
     headers: {
         token: userAuth.token
     }
 }).then((response) => {
     response.json().then((data) => {
-        console.log(data.user);
+        //console.log(data.user);
         showDataForm(data.user);
     });
 });

@@ -4,7 +4,7 @@ const formRegister = document.querySelector("#formRegister");
 formRegister.addEventListener("submit", async (e) => {
     e.preventDefault();
     console.log("Form submit");
-    fetch(getBackendUrlApi() + "/users",{
+    fetch(getBackendUrlApi("users"),{
         method: "POST",
         body: new FormData(formRegister)
     }).then((response => {
@@ -17,19 +17,19 @@ formRegister.addEventListener("submit", async (e) => {
 const formLogin = document.querySelector("#formLogin");
 formLogin.addEventListener("submit", async (e) => {
     e.preventDefault();
-    fetch(getBackendUrlApi() + "/users/login", {
+    fetch(getBackendUrlApi("users/login"), {
         method: "POST",
         body: new FormData(formLogin)
     }).then((response => {
         response.json().then((data) => {
-            if(data.type == "error"){
+            if (data.type == "error") {
                 showToast(data.message);
                 return;
             }
             localStorage.setItem("userAuth", JSON.stringify(data.user));
             showToast(`Olá, ${data.user.name} como vai!`);
             setTimeout(() => {
-                window.location.href = getBackendUrl() + "/app"
+                window.location.href = getBackendUrl("app")
             }, 3000);
         })
     }))

@@ -1,9 +1,9 @@
-export function getBackendUrl() {
-    return `${location.protocol}//${location.hostname}:8080/mvc-project-manha`;
+export function getBackendUrl(path = "") {
+    return `${location.protocol}//${location.hostname}:8080/mvc-project-manha/${path}`;
 }
 
-export function getBackendUrlApi() {
-    return `${location.protocol}//${location.hostname}:8080/mvc-project-manha/api`;
+export function getBackendUrlApi(path = "") {
+    return `${location.protocol}//${location.hostname}:8080/mvc-project-manha/api/${path}`;
 }
 
 export function showDataForm (object)  {
