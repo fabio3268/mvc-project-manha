@@ -1,17 +1,18 @@
 import {getBackendUrl, getBackendUrlApi, showToast} from "./../_shared/functions.js";
 
 const formRegister = document.querySelector("#formRegister");
+
 formRegister.addEventListener("submit", async (e) => {
     e.preventDefault();
-    console.log("Form submit");
-    fetch(getBackendUrlApi("users"),{
+    fetch(getBackendUrlApi("users"), {
         method: "POST",
         body: new FormData(formRegister)
-    }).then((response => {
+    }).then((response) => {
         response.json().then((data) => {
             showToast(data.message);
         });
-    }));
+    });
+
 });
 
 const formLogin = document.querySelector("#formLogin");
@@ -20,8 +21,8 @@ formLogin.addEventListener("submit", async (e) => {
     fetch(getBackendUrlApi("users/login"), {
         method: "POST",
         body: new FormData(formLogin)
-    }).then((response => {
-        response.json().then((data) => {
+    }).then((response) => {
+          response.json().then((data) => {
             if (data.type == "error") {
                 showToast(data.message);
                 return;
@@ -32,5 +33,5 @@ formLogin.addEventListener("submit", async (e) => {
                 window.location.href = getBackendUrl("app")
             }, 3000);
         })
-    }))
+    })
 });

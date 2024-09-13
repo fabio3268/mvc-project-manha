@@ -6,7 +6,7 @@
 ?>
 <script type="module" src="<?= url("assets/js/web/login.js"); ?>" async></script>
 <?php
-$this->end();
+    $this->end();
 ?>
 
 <!-- Formulário de Cadastro de Usuário -->
